@@ -62,59 +62,9 @@ This is a very simple step for this robot. You can watch this video to get a cle
 
 ## Arduino Codeing & Communicating by Android Mobile
 
-char t;
-const int r1=13,r2=12,l1=11,l2=10;
- 
-void setup() {
-Serial.begin(9600);
-pinMode(r1,OUTPUT);   //right motors forward
-pinMode(r2,OUTPUT);   //right motors reverse
-pinMode(l1,OUTPUT);   //left motors forward
-pinMode(l2,OUTPUT);   //left motors reverse
-}
- 
-void loop() {
-if(Serial.available()){
-  t = Serial.read();
-}
- 
-if(t == 'F'){            //move forward(all motors rotate in forward direction)
-  digitalWrite(r1,HIGH);
-  digitalWrite(r2,LOW);
-  digitalWrite(l1,HIGH);
-  digitalWrite(l2,LOW);
-}
- 
-else if(t == 'B'){      //move reverse (all motors rotate in reverse direction)
-  digitalWrite(r1,LOW);
-  digitalWrite(r2,HIGH);
-  digitalWrite(l1,LOW);
-  digitalWrite(l2,HIGH);
-}
- 
-else if(t == 'L'){      //turn right (left side motors rotate in forward direction, right side motors rotate in reverse direction for 100ms & stop)
-  digitalWrite(r1,HIGH);
-  digitalWrite(r2,LOW);
-  digitalWrite(l1,LOW);
-  digitalWrite(l2,HIGH);
-  delay(100);
-  t = 'S';
-}
- 
-else if(t == 'R'){      //turn left (right side motors rotate in forward direction, left side motors rotate in reverse direction for 100ms & stop)
-  digitalWrite(r1,LOW);
-  digitalWrite(r2,HIGH);
-  digitalWrite(l1,HIGH);
-  digitalWrite(l2,LOW);
-  delay(100);
-  t = 'S';
-}
- 
-else if(t == 'S'){      //STOP (all motors stop)
-  digitalWrite(r1,LOW);
-  digitalWrite(r2,LOW);
-  digitalWrite(l1,LOW);
-  digitalWrite(l2,LOW);
-}
-delay(100);
-} 
+[ARDUINO BLUETOOTH CAR 4 DC MOTOR.txt](https://github.com/selena1995/ARDUINO-BLUETOOTH-CONTROLLED-AEROPLANE-ROBOT-CAR/files/9372690/ARDUINO.BLUETOOTH.CAR.4.DC.MOTOR.txt)
+![Screenshot (31)](https://user-images.githubusercontent.com/79990158/185375072-8d96481a-53ac-4e08-a72a-81ba809b6a13.png)
+![Screenshot (26)](https://user-images.githubusercontent.com/79990158/185375111-22742579-8afe-474d-a76a-634170a8789c.png)
+
+## YOUTUBE VIDEO LINK
+https://www.youtube.com/watch?v=uu7UQjebLqM
